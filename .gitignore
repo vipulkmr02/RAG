@@ -10,5 +10,5 @@ wheels/
 .venv
 
 # Private
-data/
+# data/
 .env
