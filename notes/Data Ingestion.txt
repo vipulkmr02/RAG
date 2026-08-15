@@ -1,0 +1,42 @@
+in Data ingestion we will know about
+ 1. how to read?
+ 2. how to do data parsing?
+ 3. how to convert it into Document structure?
+
+DATA PARSING
+parsing depends how fast the augmentation will be.
+
+parsing is like chunking.
+breaking data into small pieces
+
+chunking is required as every LLM have a context size, kinda like
+Short-term memory or RAM.
+
+for each file data parsing going to be different
+
+
+Langchain document structure:
+
+core components:
+    1. page_content (string)
+    2. metadata (dictionary)
+
+these documents will be put in Vector DB to apply similarigy searching.
+
+Langchain provides loaders
+for multiple types of data like PDF, CSV
+
+
+document loaders are what required convert real world data files to readable text for RAG systems.
+
+
+
+CHUNKING
+
+so, Langchain provides RecursiveTextSplitter which is good for Books and PDFs and text content,
+it prioritizes the natuarl human language splitting.
+
+it takes separators and separates texts based on the given size. it's real simple thing
+but what makes it complicated is that we may need to strategize chunking to optimize the RAG systems.
+
+and in RAG SYSTEMS these chunks are also nothing but document objects
